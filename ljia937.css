@@ -1,0 +1,112 @@
+body{
+    width: 100%;
+    margin: auto;
+}
+
+div{
+    position: relative;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+hr{
+    border: none;
+    height: 4px;
+    color: black;
+    background-color: black;
+}
+
+h1{
+    font-family: Arial;
+    font-size: 3vw;
+}
+
+p{
+    font-family: Arial;
+    font-size: 2vw;
+}
+
+#logo{
+    padding-right: 100px;
+    cursor: default;
+}
+
+.table1{
+    border-spacing: 2.5rem;
+    font-size: 4vw;
+}
+
+#search {
+    width: 100%; 
+    font-size: 18px; 
+    padding: 1% 2% 2% 1%; 
+    border: 1px solid #ddd; 
+    margin-top: 12px;
+    margin-bottom: 12px; 
+  }
+
+.titleRow{
+    font-size: 2vw;
+}
+
+#ourTab{
+    border-style: hidden;
+    border-spacing: 2.5rem;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+#contact-info{
+    text-align: center;
+    background-color: rgba(216, 194, 194, 0.452);
+    border-radius: 25px;
+}
+
+#Home{
+    display:block;
+}
+
+#welcome{
+    cursor: default;
+}
+
+#show_result{
+    cursor: default;
+}
+
+#modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.5); 
+}
+
+#box {
+    background-color: white;
+    margin: 10% auto; 
+    padding: 20px;
+    border: 2px solid black;
+    width: 35%; 
+}
+  
+.close {
+    color: grey;
+    float: right;
+    font-size: 2vw;
+    font-weight: bold;
+}
+  
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

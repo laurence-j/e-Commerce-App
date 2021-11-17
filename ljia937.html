@@ -1,0 +1,133 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Dunedin Dairy</title>
+  <meta name = "description" content = "Assignment 4">
+  <meta name = "author" content = "Laurence Jiang">
+  <link rel = "icon" type = "image/png" href = "http://redsox.uoa.auckland.ac.nz/ds/logo.svg">
+  <link rel = "stylesheet" href="ljia937.css">
+  <script src="ljia937.js"></script>
+  
+</head>
+
+<body>
+    
+    <div id = "tabs">
+        <table class="table1">
+            <tr style ="cursor: pointer;">
+                <td><div id = "logo"><img src = "http://redsox.uoa.auckland.ac.nz/ds/logo.svg" alt = "logo" width = '150px'></div></td>
+                <td id ="HomeTab" onclick = "showHome();" > 🏠 </td>
+                <td id ="ProductsTab" onclick = " getProducts();"> 🛒 </td>
+                <td id ="NewsTab" onclick = "getNews();"> 📰 </td>
+                <td id ="LocationTab" onclick = "showLocation();"> 📌 </td>
+                <td id ="GuestbookTab" onclick = "showGuestbook(); getComment();"> 📖 </td>
+                <td id ="RegistrationTab" onclick = "showRegistration();"> <input type = "button" id = "button1" value = "Register" style = "cursor: pointer; font-size: 0.3em; width: 125px; height:50px; border-radius:4px;"></td>
+                <td id ="LoginTab" onclick = "showLogin();"> <input type = "button" id = "button1" value = "Log in" style = "cursor: pointer; font-size: 0.3em; width: 100px; height:50px; border-radius:4px;"></td>
+                <td id = "welcome" style = "font-size: 0.4em"> Welcome: </td>
+                <td id = "show_result" style = "font-size: 0.4em"> Guest </td>
+                <td id = "logout" onclick = "userLogout();"> <input type = "button" id = "button2" value = "Log Out" style = "cursor: pointer; font-size: 0.3em; width: 100px; height:50px; border-radius:4px;"></td>
+            </tr>
+        </table>
+    </div>
+    
+    <div id = "modal">
+        <div id = "box">
+            <span class="close" onclick="document.getElementById('modal').style.display = 'none'; ">&times;</span>
+            <p id = "modalMessage"></p>
+        </div>
+    </div>
+
+    <div id = "Home">
+        <h1>Dunedin Dairy</h1>
+
+        <b><hr></b>
+
+        <p>Welcome to the Dunedin Dairy, the leading online dairy shop in New Zealand! <br><br> We take price in sourcing the best dairy products from within New Zealand and abroad.
+        Our shop is open 24/7 and we strive to deliver your purchases promptly. <br><br> (Keeping in mind the safety of you and our staff, our deliveries are contactless!) &nbsp
+        &nbsp &nbsp <img src = "https://p1.pxfuel.com/preview/388/52/975/cow-funny-ruminant-cute.jpg" alt = "Happy Cow" width = 10% height= 10%></img></p>
+
+    </div>
+
+    <div id = "Products">
+        <h1>Products</h1>
+
+        <b><hr></b>
+
+        <input type = "text" id = "search" onkeyup = "searchFunction()" placeholder = "🔍 Search for products...">
+        <table id = "ourTab"></table>
+        
+    </div>
+    
+    <div id = "News">
+        <h1>News</h1>
+
+        <b><hr></b>
+        <table id = "ourNews"></table>
+    </div>
+    
+    <div id = "Location">
+        <h1>Location</h1>
+
+        <b><hr></b>
+        <img src = "http://redsox.uoa.auckland.ac.nz/ds/map.png" alt = "map" width = '100%'>
+
+        <div id = "contact-info">
+            <p>535 Pine Hill Road Dunedin New Zealand <br>
+            <a href = "mailto: info@DunedinDairy.co.nz">info@DunedinDairy.co.nz &nbsp&nbsp&nbsp&nbsp&nbsp</a><a href = "callto: +64 3 448 6256">+64 3 448 6256</a></p>
+
+        </div>
+    </div>
+    
+    <div id = "Guestbook">
+        <h1>Guest Book</h1>
+
+        <b><hr></b>
+        <h1>Please sign our guest book.</h1>
+        <p> Cheesy comments are OK so long as they aren't cheesy.</p>
+                <form id = "form">
+                    <textarea style = "width: 100%; height: 60px" id = "comment" form = "form" placeholder = "Your comments here"></textarea><br><br>
+                    <input style = "width:100%; height:20px;" id = "userName" placeholder = "Enter your name here"><br><br>
+
+                    <input type = "button" id = "submitButton" value = "Submit Comment" onclick = "postComment()" style = "width: 150px; height:20px; border-radius:4px;";>
+                </form>
+
+            <p>Recent Entries</p><br>
+            <iframe style = "width:100%; height:600px; background: #FFFFFF;" id = "iFrame" src = "http://redsox.uoa.auckland.ac.nz/BC/Open/Service.svc/htmlcomments"></iframe>
+    </div>
+
+    <div id = "Registration">
+        <h1>Register with us!</h1>
+
+        <b><hr></b>
+        <form id = "registrationForm">
+  
+            <p><b>Username:</b> <input style = "width:100%; height:30px;" id = "registerUsername" placeholder = "Enter your username here"><br></p>
+            <p><b>Password:</b> <input type = "password" style = "width:100%; height:30px;" id = "registerPassword" placeholder = "Enter your password here"><br></p>
+            <p><b>Repeat Password:</b> <input type = "password" style = "width:100%; height:30px;" id = "repeatPassword" placeholder = "Repeat your password here"><br></p>
+            
+            <br><input type = "button" id = "registerButton" value = "Register" onclick = "userRegistration()" style = "display: block; font-size: 1.2em; width: 200px; height:35px; border-radius:4px; margin: 0 auto;";>
+            <p id = "verification" style = "text-align: center; font-size: 1em; color: red;"></p>
+        </form>
+
+    </div>
+
+    <div id = "Login">
+        <h1>Please login here!</h1>
+
+        <b><hr></b>
+        <form id = "loginForm">
+
+            <p><b>Username:</b> <input style = "width:100%; height:30px;" id = "loginUsername" placeholder = "Enter your username here"><br></p>
+            <p><b>Password:</b> <input type = "password" style = "width:100%; height:30px;" id = "loginPassword" placeholder = "Enter your password here"><br></p>
+
+            <br><input type = "button" id = "loginButton" value = "Login" onclick = "userLogin()" style = "display: block; font-size: 1.2em; width: 200px; height:35px; border-radius:4px; margin: 0 auto;";>
+            <p id = "loginError" style = "text-align: center; font-size: 1em; color: red;"></p>
+        </form>
+
+    </div>
+
+</body>
+</html>

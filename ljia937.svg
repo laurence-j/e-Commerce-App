@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="svgLine"
+ viewBox="0 0 400 400" >
+    <line x1="12.008" y1="31.884" x2="387.992" y2="31.884" stroke="black" stroke-width="40" />
+    <line x1="12.008" y1="368.116" x2="387.992" y2="368.116" stroke="black" stroke-width="40" />
+
+    <circle cx ="272" cy="200" r="120" fill="black"/>
+    <line x1="181.884" y1="80" x2="181.884" y2="320" stroke="white" stroke-width="60" />
+
+    <line x1="41.884" y1="80" x2="41.884" y2="320" stroke="black" stroke-width="60" />
+    <line x1="241.884" y1="80" x2="241.884" y2="320" stroke="black" stroke-width="60" />
+
+    <circle cx ="72" cy="200" r="120" fill="black"/>
+    <line x1="-17.884" y1="80" x2="-17.884" y2="320" stroke="white" stroke-width="60" />
+
+    <polygon points="92.124,120 53.216,210.145 130.9,210.145" style="fill:white;" />
+    <polygon points="292.124,120 253.216,210.145 330.9,210.145" style="fill:white;" />
+    <circle cx ="92" cy="220" r="40" style="fill:white"/>
+    <circle cx ="292" cy="220" r="40" style="fill:white"/> </svg>
